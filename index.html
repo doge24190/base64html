@@ -1,55 +1,104 @@
-﻿<html>
-
+<!DOCTYPE HTML>
+<html>
+<!-- 你可以通过访问https://cdn.jsdelivr.net/gh/seldonsuun/seldonsuun.github.io/images/ +  文件名加速获得你想要的图片-->
 <head>
-	<!-- <base href="https://www.doge24190.top/"> -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>在线BASE64编码解码</title>
-	<meta name="keywords" content="在线base64编码解码,base64加密解密,base64中文在线解码">
+	<meta charset="utf-8" />
+    <meta name="keywords" content="在线base64编码解码,base64加密解密,base64中文在线解码">
 	<meta name="description" content="本工具可以将字符串做base64编码加密，或者将base64加密之后的字符串还原">
 	<meta http-equiv="Cache-Control" content="no-transform">
 	<meta http-equiv="Cache-Control" content="no-siteapp">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes">
-	<!-- <link rel="shortcut icon" href="img/common/favicon.png" type="image/x-icon"> -->
-	<!-- <link rel="bookmark" href="img/common/favicon.png"> -->
-
-	<!-- <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css"> -->
-	<!-- <link href="css/common/main.css?v=377" rel="stylesheet" type="text/css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/ckin.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="bookmark" href="img/favicon.png">
 </head>
 
-<body>
-	<div id="mainContent" class="wrapper">
-		<div class="row">
-			<div class="col-lg-9">
-				<div class="leftBar">
-					<h2 class="title">明文:</h2>
-					<textarea class="form-control" name="message" id="source"> test </textarea>
-				</div>
-				<div class="operateLR">
-					<div class="OptDetail">
-						<button class="btn btn-primary" onclick="javascript:base64_encode();"
-							style="margin-bottom: 10px;">
-							编码<i class="glyphicon glyphicon-chevron-right"></i>
-						</button>
-						<button class="btn btn-primary" onclick="javascript:base64_decode();">
-							<i class="glyphicon glyphicon-chevron-left"></i>解码
-						</button>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+
+		<!-- Menu -->
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a>明文</a></h2>
+                        <textarea class="form-control" name="message" id="source">test</textarea>
 					</div>
-				</div>
-				<div class="rightBar">
-					<h2 class="title">BASE64:</h2>
-					<textarea class="form-control" name="cipher" id="result"></textarea>
-				</div>
-				<div id="matoolsFloatDiv"><a href="http://www.doge24190.top" target="_top"> By Doge24190 </a></div>
-			</div>
+				</header>
+                <header>
+					<div class="title">
+						<h2><a>BASE64:</a></h2>
+                        <textarea class="form-control" name="cipher" id="result"></textarea>
+					</div>
+				</header>
+                <div class="operateLR">
+                    <div class="OptDetail">
+                        <button class="btn btn-primary" onclick="javascript:base64_encode();" style="margin-bottom: 10px;">
+                            编码<i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                        <button class="btn btn-primary" onclick="javascript:base64_decode();">
+                            <i class="glyphicon glyphicon-chevron-left"></i>解码
+                        </button>
+                    </div>
+                </div>
+			</article>
+
 		</div>
+
+		<!-- Sidebar -->
+		<section id="sidebar">
+
+			<!-- Intro -->
+			<section id="intro">
+				<a href="" class="logo"><img src="img/favicon.png" alt="" /></a>
+				<header>
+					<h2>BASE64编码解码</h2>
+				</header>
+			</section>
+
+			<!-- About -->
+			<section class="blurb">
+				<h2>About</h2>
+                <p>本工具可以将字符串做base64编码加密，或者将base64加密之后的字符串还原</p>
+				<ul class="actions">
+					<li><a href="https://github.com/Waopes/base64html" class="button">Learn More</a></li>
+				</ul>
+			</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+
+				</ul>
+				<!-- <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+				<p class="copyright">&copy; <a href="http://www.doge24190.top" target="_top">Doge24190</a> | Edited by <a href="https://github.com/Waopes/">Waopes</a>.</p>
+                <P class="copyright">Designed By: <a href="http://html5up.net">HTML5 UP</a>.</P>
+			</section>
+		</section>
+
 	</div>
 
-	<!-- <script src="https://hm.baidu.com/hm.js?9cc074900445f1842472986022b3fd60"></script> -->
-	<!-- <script src="https://zz.bdstatic.com/linksubmit/push.js"></script> -->
-	<script type="text/javascript" src="js/common/common.js"></script>
-	<script type="text/javascript" src="js/common/main11.11.9.js?v=489" charset="utf-8"></script>
-	<script type="text/javascript" src="components/core-min.js"></script>
-	<script type="text/javascript" src="components/enc-base64-min.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/ckin.js"></script>
+    <script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/common/main11.11.9.js?v=489" charset="utf-8"></script>
+	<script type="text/javascript" src="assets/components/core-min.js"></script>
+	<script type="text/javascript" src="assets/components/enc-base64-min.js"></script>
 	<script type="text/javascript">
 		function base64_encode() {
 			if ($("#source").val() == "") {
@@ -69,7 +118,6 @@
 			$("#source").val(words.toString(CryptoJS.enc.Utf8));
 		}
 	</script>
-
 </body>
 
 </html>

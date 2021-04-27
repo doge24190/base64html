@@ -1,0 +1,75 @@
+﻿<html>
+
+<head>
+	<!-- <base href="https://www.doge24190.top/"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>在线BASE64编码解码</title>
+	<meta name="keywords" content="在线base64编码解码,base64加密解密,base64中文在线解码">
+	<meta name="description" content="本工具可以将字符串做base64编码加密，或者将base64加密之后的字符串还原">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="bookmark" href="img/favicon.png">
+
+	<!-- <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css"> -->
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="mainContent" class="wrapper">
+		<div class="row">
+			<div class="col-lg-9">
+				<div class="leftBar">
+					<h2 class="title">明文:</h2>
+					<textarea class="form-control" name="message" id="source">test</textarea>
+				</div>
+				<div class="operateLR">
+					<div class="OptDetail">
+						<button class="btn btn-primary" onclick="javascript:base64_encode();"
+							style="margin-bottom: 10px;">
+							编码<i class="glyphicon glyphicon-chevron-right"></i>
+						</button>
+						<button class="btn btn-primary" onclick="javascript:base64_decode();">
+							<i class="glyphicon glyphicon-chevron-left"></i>解码
+						</button>
+					</div>
+				</div>
+				<div class="rightBar">
+					<h2 class="title">BASE64:</h2>
+					<textarea class="form-control" name="cipher" id="result"></textarea>
+				</div>
+				<div id="matoolsFloatDiv"><a href="http://www.doge24190.top" target="_top"> By Doge24190 </a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="https://hm.baidu.com/hm.js?9cc074900445f1842472986022b3fd60"></script> -->
+	<!-- <script src="https://zz.bdstatic.com/linksubmit/push.js"></script> -->
+	<script type="text/javascript" src="js/common/common.js"></script>
+	<script type="text/javascript" src="js/common/main11.11.9.js?v=489" charset="utf-8"></script>
+	<script type="text/javascript" src="components/core-min.js"></script>
+	<script type="text/javascript" src="components/enc-base64-min.js"></script>
+	<script type="text/javascript">
+		function base64_encode() {
+			if ($("#source").val() == "") {
+				$("#source").focus();
+				return false;
+			}
+			var str = CryptoJS.enc.Utf8.parse($("#source").val());
+			var base64 = CryptoJS.enc.Base64.stringify(str);
+			$("#result").val(base64);
+		}
+		function base64_decode() {
+			if ($("#result").val() == "") {
+				$("#result").focus();
+				return false;
+			}
+			var words = CryptoJS.enc.Base64.parse($("#result").val());
+			$("#source").val(words.toString(CryptoJS.enc.Utf8));
+		}
+	</script>
+
+</body>
+
+</html>
